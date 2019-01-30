@@ -5,5 +5,5 @@ func SayHello1(user string) string {
 }
 
 func SayHello2(user string) string {
-    return "Hello," + user
+    return "Hello, " + user
 }
