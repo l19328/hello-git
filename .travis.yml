@@ -18,3 +18,12 @@ before_install:
 
 #script:
   
+
+# 1.	选择ubuntu16.04编译机器
+# 2.	使用docker服务
+# 3.	Pull openrbuild容器镜像 (docker pull ezware/openrbuild)
+# 4.	启动容器并挂接openr代码及h3cfibservice代码到容器中
+# 5.	在容器中启动编译
+# 6.	获取编译结果，如果编译成功则启动测试脚本（limengjie准备的内容）
+# 7.	测试脚本完成openr容器的部署和测试
+# 8.	处理反馈结果 （即webhook）
