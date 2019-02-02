@@ -1,6 +1,8 @@
 #!/bin/bash
 # we need to have openr:test and fib:test first ,import by hand
 # and fibhandler in /bin 
+ls
+ls ../
 tar -cvf openr openr.tar
 docker run -itd --name openr1 --sysctl net.ipv6.conf.all.disable_ipv6=0 ezware/openrbuild bash
 docker run -itd --name openr2 --sysctl net.ipv6.conf.all.disable_ipv6=0 ezware/openrbuild bash
