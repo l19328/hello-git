@@ -1,9 +1,9 @@
 #!/bin/bash
 # we need to have openr:test and fib:test first ,import by hand
 # and fibhandler in /bin  
-docker run -itd --name openr1 --sysctl net.ipv6.conf.all.disable_ipv6=0 ezware/openr bash
-docker run -itd --name openr2 --sysctl net.ipv6.conf.all.disable_ipv6=0 ezware/openr bash
-docker run -itd --name openr3 --sysctl net.ipv6.conf.all.disable_ipv6=0 ezware/openr bash
+docker run -itd --name openr1 --sysctl net.ipv6.conf.all.disable_ipv6=0 ezware/openrbuild bash
+docker run -itd --name openr2 --sysctl net.ipv6.conf.all.disable_ipv6=0 ezware/openrbuild bash
+docker run -itd --name openr3 --sysctl net.ipv6.conf.all.disable_ipv6=0 ezware/openrbuild bash
 
 docker network create --subnet 12.13.14.0/24  --gateway=12.13.14.1 Net1
 docker network create --subnet 12.13.15.0/24  --gateway=12.13.15.1 Net2
