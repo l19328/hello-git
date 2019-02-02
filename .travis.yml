@@ -9,7 +9,8 @@ service:
 before_install:
   - docker pull ezware/openrbuild
   - docker images 
-  - docker run -itd --name openr123 ezware/openrbuild  /bin/bash 
+# - docker run -itd --name openr123 ezware/openrbuild  /bin/bash 
+  - ./build.sh
   - docker ps -a
   - docker ps
 
