@@ -4,8 +4,9 @@
 #ls
 ##ls ../
 #tar -cvf openr openr.tar
-docker run -itd --name openr1 --sysctl net.ipv6.conf.all.disable_ipv6=0 ezware/openrbuild bash
-docker exec openr1 ls
+docker run -itd --name openr --sysctl net.ipv6.conf.all.disable_ipv6=0 ezware/openrbuild bash
+docker exec openr ls /home
+docker exec openr sh -c "mkdir /home/openr2"
 #docker run -itd --name openr2 --sysctl net.ipv6.conf.all.disable_ipv6=0 ezware/openrbuild bash
 #docker run -itd --name openr3 --sysctl net.ipv6.conf.all.disable_ipv6=0 ezware/openrbuild bash
 
