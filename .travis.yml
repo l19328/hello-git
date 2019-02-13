@@ -20,7 +20,7 @@ before_install:
   - docker exec openr sh -c "ls /home/openr"
   - docker exec openr sh -c "cd /home/openr/openr/if && thrift1 -r --gen go Platform.thrift && ls -l"
   - pwd
-  - docker cp -r :openr/home/openr/openr/if/gen-go 
+  - docker cp -r openr:/home/openr/openr/if/gen-go .
   - ls 
   - cd gen-go
   - ls
