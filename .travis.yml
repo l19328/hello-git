@@ -11,16 +11,14 @@ before_install:
   - docker pull ezware/openrbuild
   - docker images 
 # - docker run -itd --name openr123 ezware/openrbuild  /bin/bash 
-  - chmod a+x build.sh
-  - ./build.sh
   - docker ps -a
   - docker ps
 
 #before_script:
   
-
-#script:
-  
+script:
+  - chmod a+x build.sh
+  - ./build.sh
 
 # 1.	选择ubuntu16.04编译机器
 # 2.	使用docker服务
