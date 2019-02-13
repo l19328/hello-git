@@ -10,6 +10,7 @@ service:
 before_install:
   - docker pull ezware/openrbuild
   - docker images 
+  - docker run -itd --name openr --sysctl net.ipv6.conf.all.disable_ipv6=0 ezware/openrbuild bash
 # - docker run -itd --name openr123 ezware/openrbuild  /bin/bash 
   - docker ps
   - docker exec openr sh -c "ls / && ls /home"
