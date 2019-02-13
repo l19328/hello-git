@@ -11,7 +11,7 @@ docker exec openr ls /home
 #cd /home/openr2 && git clone https://github.com/facebook/openr.git && pwd && \
 #ls -l && cd openr/build && cp /build_openr.sh . && ls -l && ./build_openr.sh"
 
-docker exec openr sh -c "wget https://bootstrap.pypa.io/get-pip.py  --no-check-certificate && python get-pip.py"
+docker exec openr sh -c "apt-get install wget && wget https://bootstrap.pypa.io/get-pip.py  --no-check-certificate && python get-pip.py"
 docker exec openr sh -c "./home/openr/build/build_openr.sh"
 
 
