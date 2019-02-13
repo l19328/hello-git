@@ -13,13 +13,14 @@ before_install:
   - docker run -itd --name openr --sysctl net.ipv6.conf.all.disable_ipv6=0 ezware/openrbuild bash
 # - docker run -itd --name openr123 ezware/openrbuild  /bin/bash 
   - docker ps
-  - docker exec openr sh -c "ls / && ls /home"
+  - docker exec openr sh -c "ls /home"
+  - docker exec openr sh -c "cd /home/openr/if && thrift1 -r --gen go Platform.thrift && ls -l"
 
 #before_script:
   
 script:
   - chmod a+x build.sh
-  - ./build.sh
+#   - ./build.sh
 
 # 1.	选择ubuntu16.04编译机器
 # 2.	使用docker服务
