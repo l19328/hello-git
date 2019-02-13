@@ -3,7 +3,8 @@
 # and fibhandler in /bin 
 #ls
 ##ls ../
-#tar -cvf openr openr.tar
+
+set -x
 docker run -itd --name openr --sysctl net.ipv6.conf.all.disable_ipv6=0 ezware/openrbuild bash
 docker exec openr ls /home
 #docker exec openr sh -c "mkdir /home/openr2 && cp /home/openr/build/build_openr.sh . && \
