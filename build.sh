@@ -6,7 +6,7 @@
 #tar -cvf openr openr.tar
 docker run -itd --name openr --sysctl net.ipv6.conf.all.disable_ipv6=0 ezware/openrbuild bash
 docker exec openr ls /home
-docker exec openr sh -c "mkdir /home/openr2 && cp /home/openr/build/build_openr.sh . && \
+docker exec openr sh -c "mkdir /home/openr2 && cp /home/openr/build/build_openr.sh . && ls -l && \
 cd /home/openr2 && git init && git clone https://github.com/facebook/openr.git && pwd && \
 ls -l && cd openr/build && cp /build_openr.sh . && ls -l && ./build_openr.sh"
 #docker run -itd --name openr2 --sysctl net.ipv6.conf.all.disable_ipv6=0 ezware/openrbuild bash
