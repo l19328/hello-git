@@ -19,8 +19,8 @@ before_install:
   - docker exec openr sh -c "ls /home"
   - docker exec openr sh -c "ls /home/openr"
   - docker exec openr sh -c "cd /home/openr/openr/if && thrift1 -r --gen go Platform.thrift && ls -l"
-  - docker cp openr:/home/openr/openr/if/gen-go/ipprefix .
-  - docker cp openr:/home/openr/openr/if/gen-go/platform .
+  - docker cp openr:/home/openr/openr/if/gen-go .
+#   - docker cp openr:/home/openr/openr/if/gen-go/platform .
   - ls
   - git clone https://github.com/facebook/fbthrift 
   - mkdir /home/travis/gopath/src/github.com/facebook
@@ -30,6 +30,8 @@ before_install:
   - ls /home/travis/gopath/src/github.com/facebook/fbthrift-go
   - ls /home/travis/gopath/src/github.com/l19328/hello-git
   - rm -rf fbthrift
+  - export GOPATH="GOPATH":/home/travis/gopath/src/github.com/l19328/hello-git/gen-go
+  - go env
 
 #before_script:
   
