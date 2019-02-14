@@ -22,11 +22,10 @@ before_install:
   - docker cp openr:/home/openr/openr/if/gen-go .
 # - git clone https://github.com/facebook/fbthrift/trunk/thrift/lib/go/thrift /home/travis/gopath/src/github.com/facebook/fbthrift-go
   - git clone https://github.com/facebook/fbthrift 
-  - pwd
-  - ls
   - cp -r /home/travis/gopath/src/github.com/l19328/hello-git/fbthrift/thrift/lib/go/thrift \
   /home/travis/gopath/src/github.com/facebook/fbthrift-go
   - pwd
+  - ls /home/travis/gopath/src/github.com/l19328/hello-git/gen-go
   - ls /home/travis/gopath/src/github.com/facebook/fbthrift-go
   - ls /home/travis/gopath/src/github.com/l19328/hello-git
   - cd gen-go
