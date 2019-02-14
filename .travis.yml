@@ -26,7 +26,6 @@ before_install:
   - mkdir /home/travis/gopath/src/github.com/facebook
   - cp -r /home/travis/gopath/src/github.com/l19328/hello-git/fbthrift/thrift/lib/go/thrift /home/travis/gopath/src/github.com/facebook/fbthrift-go
   - pwd
-  - ls /home/travis/gopath/src/github.com/l19328/hello-git/gen-go
   - ls /home/travis/gopath/src/github.com/facebook/fbthrift-go
   - ls /home/travis/gopath/src/github.com/l19328/hello-git
   - cd gen-go
