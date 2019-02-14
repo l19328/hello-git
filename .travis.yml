@@ -28,7 +28,6 @@ before_install:
   - pwd
   - ls /home/travis/gopath/src/github.com/facebook/fbthrift-go
   - ls /home/travis/gopath/src/github.com/l19328/hello-git
-  - cd gen-go
 
 #before_script:
   
