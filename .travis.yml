@@ -30,7 +30,7 @@ before_install:
   - ls /home/travis/gopath/src/github.com/facebook/fbthrift-go
   - ls /home/travis/gopath/src/github.com/l19328/hello-git
   - rm -rf fbthrift
-  - export GOPATH="GOPATH":/home/travis/gopath/src/github.com/l19328/hello-git/gen-go
+  - export GOPATH="$GOPATH":/home/travis/gopath/src/github.com/l19328/hello-git/gen-go
   - go env
 
 #before_script:
